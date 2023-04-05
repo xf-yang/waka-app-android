@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string name="navi_icon_home">主页</string>
+    <string name="navi_icon_post">发布</string>
+    <string name="navi_icon_mine">我的</string>
+    <string name="post_save">存草稿</string>
+    <string name="post_publish">发布</string>
+    <string name="post_memo">视频描述</string>
+    <string name="post_accept_policy">接受用户服务协议</string>
+    <string name="post_add_tag">#添加话题</string>
+    <string name="post_cover">封面</string>
+    <string name="post_clear">清空</string>
+    <string name="player_report_title">举报</string>
+    <string name="player_report_message">是否提交你的举报?</string>
+    <string name="player_report_button">提交举报</string>
+    <string name="player_play">播放</string>
+    <string name="player_like">喜欢</string>
+    <string name="title_more">更多</string>
+    <string name="connecting">连接中</string>
+    <string name="updating">更新中：%1$d/%2$d</string>
+    <string name="title_post">发布视频</string>
+
+</resources>

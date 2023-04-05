@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="navi_icon_home">キーホームページ</string>
+    <string name="navi_icon_post">投稿する</string>
+    <string name="navi_icon_mine">自分</string>
+
+    <string name="post_save">下書き</string>
+    <string name="post_publish">発表する</string>
+    <string name="post_memo">動画内容</string>
+    <string name="post_accept_policy">"サービス規約"</string>
+    <string name="post_add_tag">#ハッシュタグ</string>
+    <string name="post_cover">"カバー"</string>
+    <string name="post_clear">クリア</string>
+
+    <string name="player_report_title">通報する</string>
+    <string name="player_report_message">通報を提出しますか?</string>
+    <string name="player_report_button">通報する</string>
+    <string name="player_play">再生</string>
+    <string name="player_like">お気に入り</string>
+    <string name="title_more">詳細</string>
+    <string name="connecting">接続中</string>
+    <string name="updating">アップデート：%1$d/%2$d</string>
+    <string name="title_post">"動画を投稿する"</string>
+
+
+</resources>

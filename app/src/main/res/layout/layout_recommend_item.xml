@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="0dp"
+    android:background="@color/black"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/bottom_layer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <SurfaceView
+            android:id="@+id/surfaceView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:contentDescription="@string/player_play"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/white_space_memo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:minHeight="50dp"
+                android:orientation="vertical"
+                tools:ignore="InefficientWeight"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="10dp"
+                android:orientation="vertical"
+                android:padding="13dp"
+                android:paddingTop="5dp">
+
+                <!-- 简介 -->
+                <TextView
+                    android:id="@+id/item_memo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:shadowColor="@color/black"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="3.0"
+                    android:textAppearance="?attr/textAppearanceListItem"
+                    android:textColor="#eeffffff"
+                    android:textSize="14sp" />
+
+                <!-- 这里放广告按钮 -->
+                <Button
+                    android:id="@+id/btn_ad"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/layer_mask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--这个层用于测量屏幕尺寸-->
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/info_layer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/c_l"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!--左侧菜单-->
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/btn_play"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="#01000000"
+                android:contentDescription="@string/player_play"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/play_icon" />
+
+            <ProgressBar
+                android:id="@+id/player_loading"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/c_r"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="13dp"
+            tools:ignore="RtlHardcoded,RtlSymmetry">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|center"
+                    android:background="#66000000"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/btn_more"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:background="#01000000"
+                        app:srcCompat="@drawable/ic_player_more"
+                        tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+                    <LinearLayout
+                        android:id="@+id/box_menu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:visibility="gone">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="20dp"
+                            android:background="@color/white"
+                            android:clipToPadding="false"
+                            android:visibility="gone"
+                            app:cardCornerRadius="25dp">
+
+                            <ImageView
+                                android:id="@+id/imageView"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:scaleType="centerCrop"
+                                tools:ignore="ContentDescription" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <!--喜欢-->
+                        <ImageButton
+                            android:id="@+id/btn_like"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="8dp"
+                            android:background="#01000000"
+                            android:contentDescription="@string/player_like"
+                            app:srcCompat="@drawable/ic_like" />
+
+                        <!--举报-->
+                        <ImageButton
+                            android:id="@+id/btn_report"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="8dp"
+                            android:background="#01000000"
+                            android:contentDescription="@string/player_report_title"
+                            app:srcCompat="@drawable/ic_report" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

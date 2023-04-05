@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name" translatable="false">WAKA</string>
+    <string name="title_home" translatable="false">Home</string>
+    <string name="title_dashboard" translatable="false">Dashboard</string>
+    <string name="title_notifications" translatable="false">Notifications</string>
+
+    <string name="title_more">More</string>
+
+    <string name="connecting">connecting</string>
+    <string name="updating">updating : %1$d/%2$d</string>
+
+    <string name="navi_icon_home">Home</string>
+    <string name="navi_icon_post">Post</string>
+    <string name="navi_icon_mine">Mine</string>
+
+    <string name="player_play">Play</string>
+    <string name="player_report_title">Report</string>
+    <string name="player_report_message">Whether to report this video ?</string>
+    <string name="player_report_button">Report</string>
+
+    <string name="post_save">Save</string>
+    <string name="post_publish">Post</string>
+    <string name="post_memo">Memo</string>
+    <string name="post_accept_policy">Accept the user policy</string>
+    <string name="post_add_tag">#Add tag</string>
+    <string name="post_cover">Cover</string>
+    <string name="post_clear">Clear</string>
+    <string name="player_like">Like</string>
+    <string name="title_post">post video</string>
+
+</resources>

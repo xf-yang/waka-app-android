@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+>
+
+    <FrameLayout
+        android:id="@+id/box_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        >
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/windowBackground"
+            android:visibility="gone"
+            app:menu="@menu/bottom_nav_menu" />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/host_fragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/mobile_navigation" />
+
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/my_navi_bar"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_gravity="bottom"
+            android:background="@color/black"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btn_home"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_gravity="top"
+                android:layout_weight="1"
+                android:background="#01000000"
+                android:contentDescription="@string/navi_icon_home"
+                app:srcCompat="@drawable/ic_home" />
+
+            <ImageButton
+                android:id="@+id/btn_post"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_gravity="top"
+                android:layout_weight="1"
+                android:background="#01000000"
+                android:contentDescription="@string/navi_icon_post"
+                app:srcCompat="@drawable/ic_post"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <ImageButton
+                android:id="@+id/btn_user"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_gravity="top"
+                android:layout_weight="1"
+                android:background="#01000000"
+                android:contentDescription="@string/navi_icon_mine"
+                app:srcCompat="@drawable/ic_mine"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
