@@ -28,5 +28,3 @@ section iosApp
 
 [android APK Download](https://github.com/robin7603/waka-app-android/raw/main/app/build/outputs/apk/release/app-release.apk )
 
-![Alt text](https://raw.githubusercontent.com/robin7603/waka-app-android/main/pj.svg?token=GHSAT0AAAAAACBBEZLJBDAENILU52LEA732ZBNSTXQ)
-
